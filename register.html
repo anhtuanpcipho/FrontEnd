@@ -8,6 +8,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="validation.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
     <style>
         .nav-hov:hover {color: white;}
         #imagePreview {
@@ -16,6 +22,10 @@
             -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
             display: inline-block;
         }
+        /*.container i {*/
+        /*    margin-left: -30px;*/
+        /*    cursor: pointer;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -104,9 +114,10 @@
                             </select>
                         </div>
 
-                        <div class="col-md-12">
-                            <input class="form-control" type="password" name="password" placeholder="Password" required>
-                        </div>
+                            <div class="input-group" id="show_hide_password">
+                                <input class="form-control" type="password" name="password" placeholder="Password" required>
+                                <button class="btn btn-outline-light" type="button" id="button-addon2">Show</button>
+                            </div>
 
                         <div class="row">
                             <div class="col-md-7 mt-3">
@@ -128,10 +139,8 @@
                             </div>
                         </div>
 
-
-
                         <div class="col-md-12 mb-3">
-                            <p class="mb-1"><b style="color:white;"><i>Update your avatar:</i></b></p>
+                            <p class="mb-1"><b style="color:white;">Update your avatar:</b></p>
                             <input class="form-control" type="file" name="image_rep" id="rep_img">
                         </div>
 
@@ -231,5 +240,31 @@
         </div>
     </footer>
 </div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myHiddenButton">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id=saveChange"">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
