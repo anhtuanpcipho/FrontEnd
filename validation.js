@@ -102,13 +102,12 @@ function validation() {
     //     alert("All of your data were updated successfully!");
     //     return true;
     // }
-
-    return callModal();
+    return true;
 }
 
 $(function callModal() {
-    $('#myHiddenButton').click();
-    if($("#saveChange").click()) {
+    // alert()
+    if($("#saveChange").clicked == true) {
         alert("All of your data were updated successfully!");
         return true;
     }
