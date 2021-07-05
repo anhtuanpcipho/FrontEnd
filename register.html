@@ -88,7 +88,7 @@
                     </div>
 <!--                    <h2 style="color:white" class="mt-3">Register AnhTuan Website</h2>-->
                     <h6 style="color:white;">Fill in the data below.</h6>
-                    <form class="form-group" name="myForm" onsubmit="return validation()" method="post" novalidate>
+                    <form class="form-group" name="myForm" method="post" novalidate id="Form1">
 
                         <div class="col-md-12 input-group mb-3">
                             <input class="form-control" type="text" name="name" placeholder="Full Name" required>
@@ -151,12 +151,12 @@
                         </div>
 
                         <div class="form-button mt-3 mb-3">
-                            <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                            <button id="submit" type="button" class="btn btn-primary">Register</button>
                         </div>
 
                         <!-- list error here -->
                         <div class="validation d-block mb-3 font-weight-bold font-italic" style="color: red;">
-                            <p id="errorValid" style="color:"></p>
+                            <p id="errorValid"></p>
                         </div>
 
                     </form>
@@ -235,7 +235,7 @@
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary d-block" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myHiddenButton">
+<button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" id="myHiddenButton">
     Launch demo modal
 </button>
 
@@ -244,15 +244,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Submit Form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+                Are you sure to submit this form?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveChange">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="saveChange">Yes</button>
             </div>
         </div>
     </div>
